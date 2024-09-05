@@ -1,0 +1,76 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"@Convex Query": {
+		"prefix": "cvxquery",
+		"body": [
+			"import { query } from \"./_generated/server\";",
+			"",
+			"export const ${1:functionName} = query({",
+			"  handler: async (ctx) => {",
+			"    const { db } = ctx;",
+			"    $0",
+			"    // Your query logic here",
+			"  },",
+			"});"
+		],
+		"description": "Create a Convex query function"
+	},
+	"@Convex Mutation": {
+		"prefix": "cvxmutation",
+		"body": [
+			"import { mutation } from \"./_generated/server\";",
+			"",
+			"export const ${1:functionName} = mutation({",
+			"  handler: async (ctx, args) => {",
+			"    const { db } = ctx;",
+			"    $0",
+			"    // Your mutation logic here",
+			"  },",
+			"});"
+		],
+		"description": "Create a Convex mutation function"
+	},
+	"@Convex Action": {
+		"prefix": "cvxaction",
+		"body": [
+			"import { action } from \"./_generated/server\";",
+			"",
+			"export const ${1:functionName} = action({",
+			"  handler: async (ctx, args) => {",
+			"    $0",
+			"    // Your action logic here",
+			"  },",
+			"});"
+		],
+		"description": "Create a Convex action function"
+	},
+	"@Convex useQuery": {
+		"prefix": "cvxusequery",
+		"body": [
+			"const ${1:result} = useQuery(api.${2:module}.${3:queryFunction}, ${4:args});"
+		],
+		"description": "Use Convex useQuery hook"
+	},
+	"@Convex useMutation": {
+		"prefix": "cvxusemutation",
+		"body": [
+			"const ${1:mutate} = useMutation(api.${2:module}.${3:mutationFunction});"
+		],
+		"description": "Use Convex useMutation hook"
+	}
+}
