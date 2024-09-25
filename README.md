@@ -2,6 +2,37 @@
 
 This Bash script automates the process of setting up Convex-related configurations for the Cursor editor on macOS. It enhances your Cursor environment with Convex-specific features, making it easier to work with Convex in your projects.
 
+## Quickstart (aka stick to the script)
+
+```bash
+$ git clone https://github.com/tomredman/add-convex-to-cursor.git
+$ cd add-convex-to-cursor
+$ brew install jq
+$ chmod +x add-convex-to-cursor-mac.sh
+$ ./cursor_convex_setup.sh
+```
+
+## What does it do?
+
+This script is purely for convenience.
+
+It is exactly equivilent to:
+
+1. Adding https://docs.convex.dev/ to your Cursor custom docs, found in Cursor Settings > Features > Docs
+2. Adding `cursor.code-snippets` to Cursor's global snippet directory.
+
+That's it!
+
+To do this automatically, it will:
+
+1. Prompt to close running instances of Cursor, if any
+2. Add the docs URL and snippet file, if they don't already exist
+3. Restart Cursor
+
+## .cursorrules file
+
+I've included the .cursorrules file, which is a clever attempt to make a lossless version of a natural language rules file, but in shorthand that LLM's can read. In theory. It can be found as part of this repo as `.cursorrules`
+
 ## Features
 
 1. **Update Cursor's Personal Context**: Adds a Convex-related prompt to Cursor's AI context.
