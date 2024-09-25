@@ -1,7 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/platform-convex-orange) ![Static Badge](https://img.shields.io/badge/script-bash-green) ![Static Badge](https://img.shields.io/badge/version-0.1-yellow) ![Static Badge](https://img.shields.io/badge/contributions-accepting-green)
 
 
-# <img src="https://github.com/user-attachments/assets/28071790-624c-47f3-b95d-9b749554b0b5" width="24"> Cursor Convex Setup Script
+# <img src="https://github.com/user-attachments/assets/28071790-624c-47f3-b95d-9b749554b0b5" width="24"> Cursor + Convex Setup Script
 
 This Bash script automates the process of setting up Convex-related configurations for the Cursor editor on macOS. It enhances your Cursor environment with Convex-specific features, making it easier to work with Convex in your projects.
 
