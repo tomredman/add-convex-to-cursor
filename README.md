@@ -2,7 +2,7 @@
 
 
 # Cursor Convex Setup Script
-![convex-logomark-512](https://github.com/user-attachments/assets/28071790-624c-47f3-b95d-9b749554b0b5 | width=64)
+<img src="[https://github.com/favicon.ico](https://github.com/user-attachments/assets/28071790-624c-47f3-b95d-9b749554b0b5)" width="64">
 
 This Bash script automates the process of setting up Convex-related configurations for the Cursor editor on macOS. It enhances your Cursor environment with Convex-specific features, making it easier to work with Convex in your projects.
 
