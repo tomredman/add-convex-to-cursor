@@ -7,7 +7,7 @@ This Bash script automates the process of setting up Convex-related configuratio
 ```bash
 $ git clone https://github.com/tomredman/add-convex-to-cursor.git
 $ cd add-convex-to-cursor
-$ brew install jq
+$ brew install jq # for shell-based JSON support
 $ chmod +x add-convex-to-cursor-mac.sh
 $ ./cursor_convex_setup.sh
 ```
