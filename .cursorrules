@@ -43,6 +43,39 @@ Ctx: 1st param, db, storage, auth
 Helper: async function helper(ctx:QueryCtx, arg){}
 NPM: import{faker}from"@faker-js/faker"
 
+**IMPORTANT: Prefer to use Convex indexes over filters**. Here's an example:
+
+```typescript
+//schema.ts
+import { defineSchema, defineTable } from "convex/server";
+import { v } from "convex/values";
+
+// Define a messages table with two indexes.
+export default defineSchema({
+  messages: defineTable({
+    channel: v.id("channels"),
+    body: v.string(),
+    user: v.id("users"),
+  })
+    .index("by_channel", ["channel"])
+    .index("by_channel_user", ["channel", "user"]),
+});
+```
+
+And use an index like this:
+
+```typescript
+const messages = await ctx.db
+  .query("messages")
+  .withIndex("by_channel", (q) =>
+    q
+      .eq("channel", channel)
+      .gt("_creationTime", Date.now() - 2 * 60000)
+      .lt("_creationTime", Date.now() - 60000),
+  )
+  .collect();
+```
+
 ### Mutation
 ```typescript
 import { mutation } from "./_generated/server";
